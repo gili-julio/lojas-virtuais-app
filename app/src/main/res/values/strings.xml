@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">testApp</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Giliardo Júlio</string>
+    <string name="nav_header_subtitle">gili.julio@exemplo.com</string>
+    <string name="nav_header_desc">Foto principal</string>
+    <string name="action_settings">Configurações</string>
+
+    <string name="menu_home">Ínicio</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+</resources>

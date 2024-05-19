@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <!-- FrameLayout para a imagem da loja (circular) -->
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp">
+
+        <ImageView
+            android:id="@+id/storeImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_launcher_background"
+            android:scaleType="centerCrop"
+            android:background="@drawable/circle_shape"
+            android:clipToOutline="true"/>
+
+    </FrameLayout>
+
+    <!-- Layout para o texto -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="101dp"
+        android:layout_marginStart="16dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <!-- Nome da loja -->
+
+        <!-- Avaliação da loja -->
+        <TextView
+            android:id="@+id/storeNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Nome da Loja"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/storeRatingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avaliação: 4.5"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
