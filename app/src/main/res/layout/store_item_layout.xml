@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutstore"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:clickable="true"
+    android:onClick="@{() -> onClick.onStoreClicked}"
+    >
 
     <!-- FrameLayout para a imagem da loja (circular) -->
     <FrameLayout
@@ -46,7 +50,17 @@
             android:id="@+id/storeRatingTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:text="Avaliação: 4.5"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/storeStatusTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_background"
+            android:padding="5dp"
+            android:text="Aberto"
             android:textSize="14sp" />
 
     </LinearLayout>

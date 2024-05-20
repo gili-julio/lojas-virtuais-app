@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">testApp</string>
+    <string name="app_name">+Proximo</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Giliardo Júlio</string>
@@ -8,6 +8,7 @@
     <string name="action_settings">Configurações</string>
 
     <string name="menu_home">Ínicio</string>
-    <string name="menu_gallery">Gallery</string>
+    <string name="menu_profile">Perfil</string>
+    <string name="menu_help">Ajuda</string>
     <string name="menu_slideshow">Slideshow</string>
 </resources>

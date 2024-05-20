@@ -5,9 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.testapp.R
@@ -50,22 +52,25 @@ class HomeFragment : Fragment() {
         )
 
         // Crie um adaptador e passe a lista de lojas
-        val adapter = LojaAdapter(listaDeLojas)
+        val adapter = LojaAdapter(listaDeLojas, this)
 
         // Associe o adaptador ao RecyclerView
         recyclerView.adapter = adapter
 
         return root
     }
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
 }
 
 
-class LojaAdapter(private val listaDeLojas: List<Loja>) :
+class LojaAdapter(
+    private val listaDeLojas: List<Loja>,
+    private val fragment: Fragment
+) :
     RecyclerView.Adapter<LojaAdapter.LojaViewHolder>() {
 
     // Classe ViewHolder para os itens da lista
@@ -74,6 +79,7 @@ class LojaAdapter(private val listaDeLojas: List<Loja>) :
         val storeImageView: ImageView = itemView.findViewById(R.id.storeImageView)
         val storeNameTextView: TextView = itemView.findViewById(R.id.storeNameTextView)
         val storeRatingTextView: TextView = itemView.findViewById(R.id.storeRatingTextView)
+        val storeLayout: LinearLayout = itemView.findViewById(R.id.layoutstore)
     }
 
     // Crie a view do item da lista
@@ -89,12 +95,18 @@ class LojaAdapter(private val listaDeLojas: List<Loja>) :
         holder.storeImageView.setImageResource(loja.imagem)
         holder.storeNameTextView.text = loja.nome
         holder.storeRatingTextView.text = "Avaliação: ${loja.avaliacao}"
+
         val backgroundColor = if (position % 2 == 0) {
             holder.itemView.context.getColor(R.color.cinzaescuro)
         } else {
             holder.itemView.context.getColor(R.color.cinzaclaro)
         }
         holder.itemView.setBackgroundColor(backgroundColor)
+
+        // Configurar o clique na visualização da loja
+        holder.storeLayout.setOnClickListener {
+            fragment.findNavController().navigate(R.id.nav_gallery)
+        }
     }
 
     // Retorne o número total de itens na lista
@@ -102,6 +114,7 @@ class LojaAdapter(private val listaDeLojas: List<Loja>) :
         return listaDeLojas.size
     }
 }
+
 
 data class Loja(val nome: String, val imagem: Int, val avaliacao: Double)
 
