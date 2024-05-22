@@ -1,26 +1,24 @@
 # Documentação Técnica do App
 
-O lojas virtuais tem como objetivo ajudar os usuários a comparar lojas cadastradas no app e realizar pedidos. Permitindo visualizar as lojas, seus itens e preços, suas avaliações e feedbacks.
+O +próximo app tem como objetivo ajudar os usuários a comparar lojas cadastradas no app e realizar pedidos. Permitindo visualizar as lojas, seus itens e preços, suas avaliações e feedbacks.
 
 ## Sumário
 
 - [Objetivo](#objetivo)
-- [Visão Geral do App](#visão-geral-do-app)
+- [Visão Geral](#visão-geral)
 - [Requisitos do App](#requisitos-do-app)
-- [Arquitetura do App](#arquitetura-do-app)
 - [Design do Banco de Dados](#design-do-banco-de-dados)
-- [APIs e Endpoints](#)
-- [Interface do Usuário](#)
-- [Procedimentos de Instalação](#)
-- [Testes](#)
-- [Manutenção e Suporte](#)
-- [Anexos](#anexos)
+- [Endpoints da API](#endpoints-da-api)
+- [Telas](#telas)
+- [Testes](#testes)
+- [Manutenção e Suporte](#manutenção-e-suporte)
+- [Como instalar](#como-instalar)
 
 ## Objetivo
 
 Fornecer um aplicativo intuitivo para o gerenciamento de lojas e produtos, de pedidos e de avaliações.
 
-## Visão Geral do App
+## Visão Geral
 
 **Componentes Principais:**
  - Frontend: Aplicativo mobile (Android) desenvolvido em Kotlin
@@ -49,14 +47,6 @@ Fornecer um aplicativo intuitivo para o gerenciamento de lojas e produtos, de pe
 - O app deve informar o usuário sobre o status atual de sua compra
 - ...
 
-## Arquitetura do App
-
-**Diagrama de Componentes**
-(Inserir imagem, mostrando a interação frontend <-> backend <-> banco de dados)
-
-**Diagrama de Sequência**
-(Inserir imagem, detalha o fluxo de ações para cada funcionalidade do app)
-
 ## Design do Banco de Dados
 
 ### Modelo de dados
@@ -79,11 +69,34 @@ Fornecer um aplicativo intuitivo para o gerenciamento de lojas e produtos, de pe
  - `createdAt`: Data do cadastro do usuário no app
  - `updateAt`: Data da última alteração no cadastro do usuário
 
-## Anexos
+## Endpoints da API
 
-### Referências:
- - Documentação oficial do Kotlin
- - ...
+### Endpoints
 
-### Glossário:
- - **API:** Interface de Programação de Aplicações
+ - Citar os métodos e endpoints da API, exemplo:
+ - **(GET) "/lojas":** Retorna todas as lojas
+ ```json
+ {
+  "lojas": ["exemplar", "de novo imoveis"],
+  "total": "2"
+ }
+ ```
+
+## Telas
+
+ - Inicial: ...
+ - Login: ...
+ - Perfil do Usuário: ...
+
+## Testes
+
+ - Citar os testes realizados depois
+
+## Manutenção e Suporte
+
+ - Citar como é feita a manutenção
+ - Citar por onde entrar em contato para suporte
+
+## Como instalar
+
+ - Citar por onde e como pode ser feita a instalação
