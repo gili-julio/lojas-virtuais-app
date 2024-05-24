@@ -7,8 +7,6 @@ O +próximo app tem como objetivo ajudar os usuários a comparar lojas cadastrad
 - [Objetivo](#objetivo)
 - [Visão Geral](#visão-geral)
 - [Requisitos do App](#requisitos-do-app)
-- [Design do Banco de Dados](#design-do-banco-de-dados)
-- [Endpoints da API](#endpoints-da-api)
 - [Telas](#telas)
 - [Testes](#testes)
 - [Manutenção e Suporte](#manutenção-e-suporte)
@@ -22,8 +20,8 @@ Fornecer um aplicativo intuitivo para o gerenciamento de lojas e produtos, de pe
 
 **Componentes Principais:**
  - Frontend: Aplicativo mobile (Android) desenvolvido em Kotlin
- - Backend: API desenvolvida em Java com Spring Boot ([github-repo](https://github.com/gili-julio/backend-loja-virtual))
- - Banco de Dados: a definir...
+ - Backend: API REST desenvolvida em Java com Spring Boot ([github-repo](https://github.com/gili-julio/lojas-virtuais-backend))
+ - Banco de Dados: postgreSQL
 
 **Principais Funcionalidades:**
  - Visualização de Lojas cadastradas
@@ -46,46 +44,6 @@ Fornecer um aplicativo intuitivo para o gerenciamento de lojas e produtos, de pe
 - O app deve disponibilizar diversos filtros e ordem para a pesquisa de lojas e/ou produtos
 - O app deve informar o usuário sobre o status atual de sua compra
 - ...
-
-## Design do Banco de Dados
-
-### Modelo de dados
-
-**Lojas (stores)**
- - `id`: Identificador único da loja
- - `id.user`: Identificador do usuário que cadastrou a loja
- - `name`: Nome da loja
- - `category`: Categoria da loja (Ex: eletronicos, roupas)
- - `createdAt`: Data do cadastro da loja no app
- - `updateAt`: Data da última alteração no cadastro da loja
-
-**Produtos (itens)**
- - `id`: Identificador único do produto
- - `id.store`: Identificador da loja que o produto foi cadastrado
- - `price`: Preço do produto
- - `createdAt`: Data do cadastro do produto no app
- - `updateAt`: Data da última alteração no cadastro do produto
-
-**Usuários (users)**
- - `id`: Identificador único do usuário
- - `name`: Nome completo do usuário
- - `nickname`: Apelido do usuário
- - `passwordHashed`: Senha criptografada do usuário
- - `createdAt`: Data do cadastro do usuário no app
- - `updateAt`: Data da última alteração no cadastro do usuário
-
-## Endpoints da API
-
-### Endpoints
-
- - Citar os métodos e endpoints da API, exemplo:
- - **(GET) "/lojas":** Retorna todas as lojas
- ```json
- {
-  "lojas": ["exemplar", "de novo imoveis"],
-  "total": "2"
- }
- ```
 
 ## Telas
 
