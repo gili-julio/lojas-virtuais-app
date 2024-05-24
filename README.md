@@ -53,6 +53,7 @@ Fornecer um aplicativo intuitivo para o gerenciamento de lojas e produtos, de pe
 
 **Lojas (stores)**
  - `id`: Identificador único da loja
+ - `id.user`: Identificador do usuário que cadastrou a loja
  - `name`: Nome da loja
  - `category`: Categoria da loja (Ex: eletronicos, roupas)
  - `createdAt`: Data do cadastro da loja no app
@@ -60,12 +61,16 @@ Fornecer um aplicativo intuitivo para o gerenciamento de lojas e produtos, de pe
 
 **Produtos (itens)**
  - `id`: Identificador único do produto
- - `store.id`: Identificador da loja que o produto foi cadastrado
+ - `id.store`: Identificador da loja que o produto foi cadastrado
+ - `price`: Preço do produto
  - `createdAt`: Data do cadastro do produto no app
  - `updateAt`: Data da última alteração no cadastro do produto
 
 **Usuários (users)**
  - `id`: Identificador único do usuário
+ - `name`: Nome completo do usuário
+ - `nickname`: Apelido do usuário
+ - `passwordHashed`: Senha criptografada do usuário
  - `createdAt`: Data do cadastro do usuário no app
  - `updateAt`: Data da última alteração no cadastro do usuário
 
